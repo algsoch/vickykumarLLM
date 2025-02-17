@@ -1,11 +1,14 @@
-import json
+import os
 
-def save_json(filepath, data):
-    """Saves data to a JSON file."""
-    with open(filepath, "w") as f:
-        json.dump(data, f, indent=4)
+def read_file_securely(path: str):
+    """Securely reads a file from /data directory."""
+    file_path = os.path.join("data", path)
+    
+    if ".." in path or path.startswith("/"):
+        raise ValueError("Invalid file path")
 
-def load_json(filepath):
-    """Loads data from a JSON file."""
-    with open(filepath, "r") as f:
-        return json.load(f)
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found: {file_path}")
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        return file.read()
