@@ -1,6 +1,9 @@
 # Use a lightweight Python image
 FROM python:3.9-slim
 
+# Pull the Python image
+# docker pull python:3.9-slim
+
 # Set working directory
 WORKDIR /app
 
