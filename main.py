@@ -13,7 +13,7 @@ app = FastAPI()
 data_directory = "./data/"
 
 LLM_API_BASE = "https://aiproxy.sanand.workers.dev/openai/v1"
-LLM_API_KEY = os.environ.get("eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDY0MzhAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.cVZQ9PdwcVpCw0uUIchzua3Skut2HmVioyiE47VkDkU")
+LLM_API_KEY = os.environ.get("evyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDY0MzhAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.cVZQ9PdwcVpCw0uUIchzua3Skut2HmVioyiE47VkDkU")
 
 def call_llm_api(prompt):
     headers = {
